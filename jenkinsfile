@@ -1,18 +1,20 @@
-pipeline {
-    stages {
-        stage("checkout code") {
-                }   
+pipeline{
+    stages{
+        stage("checkout code"){
+            steps{
+                checkput scm
+            }
+            
         }
-        stage("show python version") {
+        stage('show python version') {
             steps {
                 bat python --version
             }
-        } 
-        stage("run extract_data.py") {
+        }
+        stage('run extract_data.py') {
             steps {
-                checkout scm
-                sgtep
+                bat python extract_data.py
             }
         }
-    }   
-}         
+    }
+}
