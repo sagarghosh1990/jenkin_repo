@@ -1,0 +1,18 @@
+pipeline {
+    stages {
+        stage("checkout code") {
+                }   
+        }
+        stage("show python version") {
+            steps {
+                bat python --version
+            }
+        } 
+        stage("run extract_data.py") {
+            steps {
+                checkout scm
+                sgtep
+            }
+        }
+    }   
+}         
