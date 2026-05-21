@@ -12,6 +12,14 @@ pipeline {
             }
             
         }
+
+        stage('debug') {
+            steps {
+                bat 'whoami'
+                bat 'where python'
+                bat 'dir "C:\\Users\\MONY SAGAR GHOSH\\AppData\\Local\\Programs\\Python\\Python314"'
+            }
+        }
         stage('show python version') {
             steps {
                 bat "\"${env.PYTHON}\" --version"
