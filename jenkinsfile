@@ -2,9 +2,18 @@ pipeline {
     agent any
 
     stages {
-        stage('show python version') {
+        stage('Debug') {
             steps {
-                bat 'python --version'
+                bat 'echo Current User:'
+                bat 'whoami'
+
+                bat 'echo Python Locations:'
+                bat 'where python'
+
+                bat 'echo Current Directory:'
+                bat 'cd'
+
+                bat 'dir'
             }
         }
     }
